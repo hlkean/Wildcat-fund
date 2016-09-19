@@ -1,0 +1,185 @@
+@font-face {
+  font-family: main-font;
+  src: url("../../fonts/Cinzel-Regular.ttf"); }
+
+html, body {
+  height: 100%; }
+
+body {
+  background-color: #900902; }
+
+.logo {
+  background-image: url("../images/logo-transparent.png");
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat; }
+
+section.main-container {
+  overflow: scroll;
+  width: 100%;
+  margin: 0 auto;
+  height: 100%;
+  padding-top: 125px;
+  background-color: #fff;
+  color: #900902; }
+  @media only screen and (min-width: 760px) {
+    section.main-container {
+      max-width: 700px; } }
+  section.main-container .content {
+    padding: 0 15px;
+    margin-bottom: 40px; }
+  section.main-container h1 {
+    font-family: "main-font", arial, sans-serif;
+    font-size: 35px;
+    text-align: center;
+    margin-bottom: 50px; }
+    @media only screen and (min-width: 760px) {
+      section.main-container h1 {
+        font-size: 50px; } }
+  section.main-container h2 {
+    font-family: "main-font", arial, sans-serif;
+    font-size: 25px;
+    text-align: center;
+    margin-bottom: 25px; }
+    @media only screen and (min-width: 760px) {
+      section.main-container h2 {
+        font-size: 40px; } }
+  section.main-container p {
+    margin: 20px auto; }
+    @media only screen and (min-width: 760px) {
+      section.main-container p.intro {
+        float: left;
+        width: 70%; } }
+  section.main-container .inline-img {
+    margin: 0 auto;
+    width: 100%;
+    text-align: center; }
+    @media only screen and (min-width: 760px) {
+      section.main-container .inline-img {
+        float: right;
+        width: 30%; } }
+
+.slicknav_menu {
+  background-image: url("../images/logo-transparent.png");
+  background-size: 165px;
+  min-height: 70px;
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-color: #A9A49B;
+  width: 100%; }
+  @media only screen and (min-width: 660px) {
+    .slicknav_menu {
+      display: none !important; } }
+  .slicknav_menu .slicknav_btn {
+    background-color: #900902;
+    margin-top: 17px; }
+  .slicknav_menu .slicknav_nav {
+    padding-top: 10px;
+    text-align: center;
+    font-family: "main-font", arial, sans-serif; }
+
+.mobile-only {
+  display: block; }
+  @media only screen and (min-width: 660px) {
+    .mobile-only {
+      display: none; } }
+
+.ignore-mobile {
+  display: none; }
+  @media only screen and (min-width: 660px) {
+    .ignore-mobile {
+      display: block; } }
+
+footer {
+  background-color: #900902;
+  height: 40px;
+  width: 100%;
+  border-top: 3px solid #fff !important;
+  color: #fff;
+  text-align: center;
+  font-family: "main-font", arial, sans-serif !important; }
+  footer p {
+    margin: 20px auto; }
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after {
+  content: '';
+  content: none; }
+
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+@font-face {
+  font-family: main-font;
+  src: url("../../fonts/Cinzel-Regular.ttf"); }
+
+nav {
+  border-bottom: 3px solid #900902;
+  background-color: #A9A49B;
+  height: 100px;
+  width: 100%;
+  position: fixed; }
+  @media only screen and (min-width: 760px) {
+    nav {
+      border-bottom: 3px solid #fff; } }
+
+#menu {
+  display: none; }
+
+.header-logo {
+  min-height: 100px;
+  margin-top: 0 !important; }
+
+.desktop-nav {
+  display: flex;
+  display: flex;
+  flex: 1 0 auto;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+  max-width: 700px;
+  margin: 0 auto; }
+  .desktop-nav li {
+    flex: 1 0 33%;
+    text-align: center;
+    margin-top: 20px; }
+
+.nav-link {
+  color: #fff;
+  font-family: "main-font", arial, sans-serif;
+  font-size: 20px;
+  margin-top: 20px;
+  text-decoration: none; }
+
+@font-face {
+  font-family: "main";
+  src: url("../../fonts/Cinzel-Regular.ttf"); }

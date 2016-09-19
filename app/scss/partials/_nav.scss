@@ -1,0 +1,30 @@
+@font-face {
+    font-family: main-font;
+    src: url('../../fonts/Cinzel-Regular.ttf');
+}
+
+nav {
+	border-bottom: 3px solid #900902;
+	background-color: #A9A49B ;
+	height: 100px;
+	width: 100%;
+	position: fixed;
+	@media only screen and (min-width: 760px) {
+		border-bottom: 3px solid #fff;
+	}
+}
+
+#menu {
+	display: none;
+}
+
+.header-logo {
+	min-height: 100px;
+	margin-top: 0 !important;
+	// flex: 1 0 auto;
+
+}
+.desktop-nav { display: flex; display: flex; flex: 1 0 auto; justify-content: space-around; align-items: center; height: 100%; max-width: 700px; margin: 0 auto;
+	li { flex: 1 0 33%; text-align: center; margin-top: 20px;} 
+}
+.nav-link { color: #fff; font-family: "main-font", arial, sans-serif; font-size: 20px; margin-top: 20px; text-decoration: none;}
