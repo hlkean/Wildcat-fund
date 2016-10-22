@@ -6,28 +6,47 @@ html, body {
   height: 100%; }
 
 body {
-  background-color: #900902; }
+  background-color: #f1f1f1; }
 
 .logo {
   background-image: url("../images/logo-transparent.png");
   background-size: contain;
   background-position: center center;
   background-repeat: no-repeat; }
+  .logo a {
+    height: 100px;
+    display: block; }
+
+section.hero {
+  background-image: url("http://www.fillmurray.com/1280/260");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  width: 100%;
+  min-height: 260px; }
 
 section.main-container {
-  overflow: scroll;
   width: 100%;
   margin: 0 auto;
   height: 100%;
-  padding-top: 125px;
+  padding: 50px 0 25px;
   background-color: #fff;
   color: #900902; }
   @media only screen and (min-width: 760px) {
     section.main-container {
-      max-width: 700px; } }
+      max-width: 900px;
+      margin-bottom: 15px; } }
+  @media only screen and (min-width: 900px) {
+    section.main-container {
+      box-shadow: 3px 20px 70px 8px #000; } }
   section.main-container .content {
-    padding: 0 15px;
+    padding: 0 25px;
     margin-bottom: 40px; }
+    section.main-container .content.red {
+      background-color: #900902;
+      color: #fff;
+      padding-top: 15px;
+      padding-bottom: 15px; }
   section.main-container h1 {
     font-family: "main-font", arial, sans-serif;
     font-size: 35px;
@@ -45,11 +64,37 @@ section.main-container {
       section.main-container h2 {
         font-size: 40px; } }
   section.main-container p {
-    margin: 20px auto; }
+    margin: 20px auto;
+    font-size: 18px; }
     @media only screen and (min-width: 760px) {
       section.main-container p.intro {
         float: left;
         width: 70%; } }
+  section.main-container a {
+    font-family: main-font; }
+    section.main-container a.button {
+      color: #900902;
+      border: 1px solid #900902;
+      padding: 16px 20px;
+      text-decoration: none;
+      font-size: 20px;
+      display: block; }
+      @media only screen and (min-width: 760px) {
+        section.main-container a.button {
+          max-width: 225px;
+          margin: 0 auto; }
+          section.main-container a.button:hover {
+            color: #fff;
+            border: 1px solid #fff;
+            background-color: #900902; } }
+      section.main-container a.button.red-bg {
+        color: #fff;
+        border: 1px solid #fff; }
+        @media only screen and (min-width: 760px) {
+          section.main-container a.button.red-bg:hover {
+            color: #900902;
+            border: 1px solid #900902;
+            background-color: #fff; } }
   section.main-container .inline-img {
     margin: 0 auto;
     width: 100%;
@@ -58,37 +103,6 @@ section.main-container {
       section.main-container .inline-img {
         float: right;
         width: 30%; } }
-
-.slicknav_menu {
-  background-image: url("../images/logo-transparent.png");
-  background-size: 165px;
-  min-height: 70px;
-  background-position: top center;
-  background-repeat: no-repeat;
-  background-color: #A9A49B;
-  width: 100%; }
-  @media only screen and (min-width: 660px) {
-    .slicknav_menu {
-      display: none !important; } }
-  .slicknav_menu .slicknav_btn {
-    background-color: #900902;
-    margin-top: 17px; }
-  .slicknav_menu .slicknav_nav {
-    padding-top: 10px;
-    text-align: center;
-    font-family: "main-font", arial, sans-serif; }
-
-.mobile-only {
-  display: block; }
-  @media only screen and (min-width: 660px) {
-    .mobile-only {
-      display: none; } }
-
-.ignore-mobile {
-  display: none; }
-  @media only screen and (min-width: 660px) {
-    .ignore-mobile {
-      display: block; } }
 
 footer {
   background-color: #900902;
@@ -99,7 +113,7 @@ footer {
   text-align: center;
   font-family: "main-font", arial, sans-serif !important; }
   footer p {
-    margin: 20px auto; }
+    margin: 10px auto; }
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
@@ -147,10 +161,56 @@ nav {
   background-color: #A9A49B;
   height: 100px;
   width: 100%;
-  position: fixed; }
+  position: relative; }
   @media only screen and (min-width: 760px) {
     nav {
-      border-bottom: 3px solid #fff; } }
+      height: 75px; } }
+  @media only screen and (min-width: 760px) {
+    nav.fixed {
+      height: 50px; } }
+  nav.fixed + .nav-block {
+    height: 80px; }
+
+.fixed {
+  position: fixed; }
+
+.nav-block {
+  height: 0px; }
+
+.slicknav_menu {
+  background-image: url("../images/logo-transparent.png");
+  background-size: 165px;
+  min-height: 70px;
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-color: #A9A49B;
+  width: 100%; }
+  @media only screen and (min-width: 660px) {
+    .slicknav_menu {
+      display: none !important; } }
+  .slicknav_menu .slicknav_btn {
+    background-color: #900902;
+    margin-top: 17px; }
+  .slicknav_menu .slicknav_nav {
+    padding-top: 10px;
+    text-align: center;
+    font-family: "main-font", arial, sans-serif; }
+    .slicknav_menu .slicknav_nav li {
+      height: 45px;
+      font-size: 20px;
+      padding-top: 12px; }
+
+.mobile-only {
+  display: block; }
+  @media only screen and (min-width: 660px) {
+    .mobile-only {
+      display: none; } }
+
+.ignore-mobile {
+  display: none; }
+  @media only screen and (min-width: 660px) {
+    .ignore-mobile {
+      display: block; } }
 
 #menu {
   display: none; }
@@ -183,3 +243,47 @@ nav {
 @font-face {
   font-family: "main";
   src: url("../../fonts/Cinzel-Regular.ttf"); }
+
+.homepage .button-wrapper {
+  flex-basis: 100%;
+  width: 100%;
+  text-align: center;
+  margin: 35px 0 10px; }
+
+.homepage .event-module {
+  display: flex;
+  flex: 1 0 auto;
+  flex-wrap: wrap; }
+  @media only screen and (min-width: 760px) {
+    .homepage .event-module {
+      padding: 0 50px;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 25px; } }
+  .homepage .event-module .button-wrapper {
+    margin-top: 20px; }
+  .homepage .event-module h2 {
+    flex-basis: 100%; }
+  .homepage .event-module .img-container {
+    flex-basis: 100%;
+    height: 250px;
+    overflow: hidden;
+    background-image: url("http://www.fillmurray.com/500/350");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat; }
+    @media only screen and (min-width: 760px) {
+      .homepage .event-module .img-container {
+        height: 250px;
+        flex-basis: 45%; } }
+  .homepage .event-module .recap {
+    flex-basis: 100%; }
+    .homepage .event-module .recap a {
+      color: #900902;
+      margin-top: 15px;
+      display: block; }
+    @media only screen and (min-width: 760px) {
+      .homepage .event-module .recap {
+        flex-basis: 45%;
+        font-size: 20px;
+        padding: 0 25px; } }

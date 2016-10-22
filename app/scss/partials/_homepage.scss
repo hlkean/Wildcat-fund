@@ -1,0 +1,51 @@
+.homepage {
+	.button-wrapper {
+		flex-basis: 100%;
+		width: 100%;
+		text-align: center;
+		margin: 35px 0 10px;
+	}
+	.event-module {
+		display: flex;
+		flex: 1 0 auto;
+		flex-wrap: wrap;
+		@media only screen and (min-width: 760px) {
+			padding: 0 50px;
+			justify-content: space-between;
+			align-items: center;
+			margin-bottom: 25px;
+		}
+		.button-wrapper {
+			margin-top: 20px;
+		}
+		h2 {
+			flex-basis: 100%;
+		}
+		.img-container {
+			flex-basis: 100%;
+			height:250px;
+			overflow: hidden;
+			background-image: url('http://www.fillmurray.com/500/350');
+			background-position: center center;
+			background-size: cover;
+			background-repeat: no-repeat;
+			@media only screen and (min-width: 760px) {
+				height: 250px;
+				flex-basis: 45%;
+			}			
+		}
+		.recap {
+			flex-basis: 100%;
+			a { 
+				color: #900902; 
+				margin-top: 15px;
+				display: block;
+			}
+			@media only screen and (min-width: 760px) {
+				flex-basis: 45%;
+				font-size: 20px;
+				padding: 0 25px;
+			}
+		}
+	}
+}

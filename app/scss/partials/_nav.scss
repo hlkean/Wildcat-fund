@@ -8,12 +8,68 @@ nav {
 	background-color: #A9A49B ;
 	height: 100px;
 	width: 100%;
-	position: fixed;
+	position: relative;
 	@media only screen and (min-width: 760px) {
-		border-bottom: 3px solid #fff;
+		height: 75px;
+	}
+	&.fixed {
+		@media only screen and (min-width: 760px) {
+			height: 50px;
+		}
+		+.nav-block {
+			height: 80px;
+		}
+	}
+}
+.fixed {
+	position: fixed;
+}
+
+.nav-block {
+	height: 0px;
+}
+
+.slicknav_menu {
+	background-image: url('../images/logo-transparent.png');
+	background-size: 165px;
+	min-height: 70px;
+	background-position: top center;
+	background-repeat: no-repeat;
+	background-color: #A9A49B ;
+	width: 100%;
+
+	@media only screen and (min-width: 660px) {
+		display: none !important;
+	}
+	.slicknav_btn {
+		background-color: #900902;
+		margin-top: 17px;
+	}
+	.slicknav_nav {
+		padding-top: 10px;
+		text-align: center;
+		font-family: "main-font", arial, sans-serif;
+		li {
+			height: 45px;
+			font-size: 20px;
+			padding-top:12px;
+		}
+	}
+}
+.mobile-only { 
+	display: block; 
+	@media only screen and (min-width: 660px) {
+		display: none;
 	}
 }
 
+.ignore-mobile {
+	display: none;
+	@media only screen and (min-width: 660px) {
+		display: block;
+	}
+
+}
 #menu {
 	display: none;
 }

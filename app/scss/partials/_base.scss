@@ -4,28 +4,49 @@
 }
 
 html, body { height: 100%; }
-body { background-color: #900902; }
+body { background-color: #f1f1f1; };
 .logo {
 	background-image: url('../images/logo-transparent.png');
 	background-size: contain;
 	background-position: center center;
 	background-repeat: no-repeat;
+	a {
+		height: 100px;
+		display: block;
+	}
 }
 
 section {
+	&.hero {
+		background-image: url('http://www.fillmurray.com/1280/260');
+		background-size: cover;
+		background-position: center center;
+		background-repeat: no-repeat;
+		width: 100%;
+		min-height: 260px;
+	}
 	&.main-container {
-		overflow: scroll;
 		width: 100%;
 		margin:  0 auto;
 		height: 100%;
-		padding-top: 125px;
+		padding: 50px 0 25px;
 		background-color: #fff;
 		color: #900902;
 		@media only screen and (min-width: 760px) {
-			max-width: 700px;
+			max-width: 900px;
+			margin-bottom: 15px;
+		}
+		@media only screen and (min-width: 900px) {
+			box-shadow: 3px 20px 70px 8px #000;
 		}
 		.content {
-			padding: 0 15px; margin-bottom: 40px;
+			padding: 0 25px; margin-bottom: 40px;
+		&.red {
+				background-color: #900902;
+				color: #fff;
+				padding-top: 15px; 
+				padding-bottom: 15px;
+			}
 		}
 		h1 { font-family: "main-font", arial, sans-serif; font-size: 35px; text-align: center; margin-bottom: 50px;
 			@media only screen and (min-width: 760px) {
@@ -37,12 +58,47 @@ section {
 				font-size: 40px;
 			}
 		}
-		p { margin: 20px auto; 
+		p { 
+			margin: 20px auto; 
+			font-size: 18px;
 			&.intro { 
 				@media only screen and (min-width: 760px) {
 					float: left; width: 70%; 
 				}
 			}
+		}
+
+		
+		a {
+			font-family: main-font;
+			&.button {
+				color: #900902;
+				border: 1px solid #900902;
+				padding: 16px 20px;
+				text-decoration: none;
+				font-size: 20px;
+				display: block;
+				@media only screen and (min-width: 760px) {
+					max-width: 225px;
+					margin: 0 auto;
+					&:hover {
+						color: #fff;
+						border: 1px solid #fff;
+						background-color: #900902;
+					}
+				}
+				&.red-bg {
+					color: #fff;
+					border: 1px solid #fff;
+					@media only screen and (min-width: 760px) {
+						&:hover {
+							color: #900902;
+							border: 1px solid #900902;
+							background-color: #fff;
+						}
+					}
+				}
+			}	
 		}
 
 		.inline-img { 
@@ -56,43 +112,6 @@ section {
 	}
 }
 
-.slicknav_menu {
-	background-image: url('../images/logo-transparent.png');
-	background-size: 165px;
-	min-height: 70px;
-	background-position: top center;
-	background-repeat: no-repeat;
-	background-color: #A9A49B ;
-	width: 100%;
-
-	@media only screen and (min-width: 660px) {
-		display: none !important;
-	}
-	.slicknav_btn {
-		background-color: #900902;
-		margin-top: 17px;
-	}
-	.slicknav_nav {
-		padding-top: 10px;
-		text-align: center;
-		font-family: "main-font", arial, sans-serif;
-	}
-}
-.mobile-only { 
-	display: block; 
-	@media only screen and (min-width: 660px) {
-		display: none;
-	}
-}
-
-.ignore-mobile {
-	display: none;
-	@media only screen and (min-width: 660px) {
-		display: block;
-	}
-
-}
-
 footer {
 	background-color: #900902;
 	height: 40px;
@@ -101,5 +120,5 @@ footer {
 	color: #fff;
 	text-align: center;
 	font-family: "main-font", arial, sans-serif !important;
-	p { margin: 20px auto; }
+	p { margin: 10px auto; }
 }
